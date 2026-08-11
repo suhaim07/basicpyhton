@@ -4,13 +4,14 @@
 # s1 = Student()
 # print(s1.name)
 
-class Car:
-    colour = "red"
-    def __init__(self,name, rate):
+class Friends:
+    college_name = "anjuman"
+    def __init__(self,name,marks):
         self.name = name
-        self.rate = rate
+        self.marks = marks
 
-car1 = Car("bmv",9)
-car2 = Car("audi", 8.5)
-print(car2.rate)
-        
+s1 = Friends("siuu",99)
+s2 = Friends("suuii",99.6)
+print(s1.name,s1.marks)
+print(s2.name,s2.marks)
+print(s2.college_name)
