@@ -1,19 +1,9 @@
-class Student:
+bal1 = input ("enter the balance: ")
+class Account:
+    def __init__(self,bal,acc_no):
+        self.balance = bal
+        self.account_no = acc_no
 
-
-    def __init__(self,name,marks):
-        self.name = name
-        self.marks = marks
-    @staticmethod
-    def static():
-        print("hello")
-        
-    def avg(self):
-        sum = 0
-        for val in self.marks:
-            sum += val
-        print("hi", self.name,"your avg score is:", sum/3)
-
-s1 = Student("affan",[44,33,22])
-s1.avg()
-s1.static()
+acc1 = Account(bal1, 12345)
+print(acc1.balance)
+print(acc1.account_no)
