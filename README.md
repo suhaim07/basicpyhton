@@ -2,4 +2,4 @@
 learning python
 class
 object
-l
+__privarte and public

@@ -1,7 +1,10 @@
-class Account:
-    def __init__(self,acc_no,acc_pass):
-        self.acc_no = acc_no
-        self.__acc_pass = acc_pass
+class Person:
+    __name = "hello"
 
-acc1 = Account("1233","siuu")
-print(acc1.__acc_pass)
+    def __hello(self):
+        print("hello person!")
+
+    def welcome(self):
+        self.__hello()
+p1 = Person()
+print(p1.welcome())
