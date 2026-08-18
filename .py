@@ -1,10 +1,17 @@
-class Person:
-    __name = "hello"
+class Car:
+    @staticmethod
+    def start():
+        print("car started..")
 
-    def __hello(self):
-        print("hello person!")
+    @staticmethod
+    def stop():
+        print("car stopped")
 
-    def welcome(self):
-        self.__hello()
-p1 = Person()
-print(p1.welcome())
+class ToyotaCar(Car):
+    def __init__(self,name):
+        self.name = name
+
+car1 = ToyotaCar("fortuner")
+car2 = ToyotaCar("swift")
+
+print(car1.start())
