@@ -8,10 +8,15 @@ class Car:
         print("car stopped")
 
 class ToyotaCar(Car):
-    def __init__(self,name):
-        self.name = name
+    def __init__(self,brand):
+        self.brand = brand
 
-car1 = ToyotaCar("fortuner")
-car2 = ToyotaCar("swift")
+class Fortuner(ToyotaCar):
+    def __init__(self,type):
+        self.type = type
 
-print(car1.start())
+car1 = Fortuner("petrol")
+car2 = Fortuner("diesel")
+
+print(car1.type)
+print(car2.type)
