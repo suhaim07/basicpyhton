@@ -1,20 +1,11 @@
-class Car:
-    def __init__(self,type):
-        self.type = type
+class Person:
+    name = "anonymous"
 
-    @staticmethod
-    def start():
-        print("car started..")
+    @classmethod
+    def ChangeName(cls,name):
+        cls.name = name
 
-    @staticmethod
-    def stop():
-        print("car stopped..")
-
-class Toyota(Car):
-    def __init__(self, name, type):
-        self.name = name
-        super().__init__(type)
-        super().start()
-
-car1 = Toyota("fortuner", "electric")
-print(car1.type)
+p1 = Person()
+p1.ChangeName("badriya don")
+print(p1.name)
+print(Person.name)
