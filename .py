@@ -1,22 +1,14 @@
-class Car:
-    @staticmethod
-    def start():
-        print("car started..")
+class A:
+    varA = "welcome to class A"
 
-    @staticmethod
-    def stop():
-        print("car stopped")
+class B:
+    varB = "welcome to class B"
 
-class ToyotaCar(Car):
-    def __init__(self,brand):
-        self.brand = brand
+class C(A,B):
+    varC = "welcome to class C"\
 
-class Fortuner(ToyotaCar):
-    def __init__(self,type):
-        self.type = type
+c1 = C()
 
-car1 = Fortuner("petrol")
-car2 = Fortuner("diesel")
-
-print(car1.type)
-print(car2.type)
+print(c1.varC)
+print(c1.varB)
+print(c1.varA)
