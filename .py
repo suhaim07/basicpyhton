@@ -1,14 +1,20 @@
-class A:
-    varA = "welcome to class A"
+class Car:
+    def __init__(self,type):
+        self.type = type
 
-class B:
-    varB = "welcome to class B"
+    @staticmethod
+    def start():
+        print("car started..")
 
-class C(A,B):
-    varC = "welcome to class C"\
+    @staticmethod
+    def stop():
+        print("car stopped..")
 
-c1 = C()
+class Toyota(Car):
+    def __init__(self, name, type):
+        self.name = name
+        super().__init__(type)
+        super().start()
 
-print(c1.varC)
-print(c1.varB)
-print(c1.varA)
+car1 = Toyota("fortuner", "electric")
+print(car1.type)
