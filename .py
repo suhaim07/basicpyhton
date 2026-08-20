@@ -1,11 +1,16 @@
-class Person:
-    name = "anonymous"
+class Complex:
+    def __init__(self,real,imag):
+        self.real = real
+        self.imag = imag
+    def ShowNumber(self):
+        print(self.real,"i +", self.imag,"j")
 
-    @classmethod
-    def ChangeName(cls,name):
-        cls.name = name
+    def __add__(self, num2):
+        newReal = self.real + num2.real
+        newImag = self.imag + num2.imag
+        return Complex(newReal, newImag)
+num1 = Complex(1,5)
+num1.ShowNumber()
 
-p1 = Person()
-p1.ChangeName("badriya don")
-print(p1.name)
-print(Person.name)
+num2 = Complex(3,6)
+num2.ShowNumber()
