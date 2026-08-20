@@ -1,16 +1,13 @@
-class Complex:
-    def __init__(self,real,imag):
-        self.real = real
-        self.imag = imag
-    def ShowNumber(self):
-        print(self.real,"i +", self.imag,"j")
+class Circle:
+    def __init__(self,radius):
+        self.radius = radius
 
-    def __add__(self, num2):
-        newReal = self.real + num2.real
-        newImag = self.imag + num2.imag
-        return Complex(newReal, newImag)
-num1 = Complex(1,5)
-num1.ShowNumber()
+    def area(self):
+        return 3.14 * self.radius ** 2
 
-num2 = Complex(3,6)
-num2.ShowNumber()
+    def perimeter(self):
+        return 2 * 3.14 * self.radius
+
+c1 = Circle(21)
+print(c1.area())
+print(c1.perimeter())
