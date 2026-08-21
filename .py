@@ -1,15 +1,14 @@
-class Employee:
-    def __init__(self,role,dept,salary):
-        self.role = role
-        self.dept = dept
-        self.salary = salary
-    def ShowDetails(self):
-        print(f"work is {self.role} and department is {self.dept} and salary will be {self.salary}")
+def hn(n):
+    if not n:
+        return None
 
-class Engineer(Employee):
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-        super().__init__("accountant","finance", 60000)
-e1 = Engineer("Affan",20)
-e1.ShowDetails()
+    highest = n[0]
+
+    for num in n:
+        if num > highest:
+            highest = num
+    return highest
+
+numbers_list = [3, 5, 1, 22, -4, 78, 0]
+highest_number = hn(numbers_list)
+print("The highest number in the list is:", highest_number)
