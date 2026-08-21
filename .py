@@ -1,14 +1,15 @@
-def hn(n):
-    if not n:
-        return None
+a = [1,2,3,4]
+n = 0
+b = a[n]
+c= a[0]
 
-    highest = n[0]
+for i in a:
+    if i > b:
+        b = i
+print(i)
 
-    for num in n:
-        if num > highest:
-            highest = num
-    return highest
+for j in a:
+    if j < c:
+        c = j
 
-numbers_list = [3, 5, 1, 22, -4, 78, 0]
-highest_number = hn(numbers_list)
-print("The highest number in the list is:", highest_number)
+print(c)
