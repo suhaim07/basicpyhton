@@ -1,6 +1,11 @@
-a = [1,2,3,4]
-n = a[0]
-for i in a:
-    n *= i
+a = [1,2,2,3,4,4,4]
+count = {}
 
-print(n)
+for i in a:
+    if i in count:
+        count[i] += 1
+
+    else:
+        count[i] = 1
+
+print(count)
