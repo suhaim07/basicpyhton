@@ -1,7 +1,7 @@
-n = 583929999909
-count = 0
+n = 1234
+sum = 1
 while n > 0:
     digit = n % 10
-    count += 1
+    sum = sum*digit
     n = n // 10
-print(count)
+print(sum)
