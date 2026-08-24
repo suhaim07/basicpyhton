@@ -1,7 +1,7 @@
-n = 1234
-rev = 0
+n = 583929999909
+count = 0
 while n > 0:
     digit = n % 10
-    rev = rev * 10 + digit
+    count += 1
     n = n // 10
-print(rev)
+print(count)
