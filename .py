@@ -1,10 +1,9 @@
 n = 58329
-largest_digit = 0
+small_digit = n
 
 while n > 0:
     digit = n % 10
-    if digit > largest_digit:
-        largest_digit = digit
+    if digit < small_digit:
+        small_digit = digit
     n //= 10
-
-print("Largest digit:", largest_digit)
+print(small_digit)
