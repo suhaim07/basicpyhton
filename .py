@@ -1,8 +1,8 @@
-n = 1234
-product = 1
-while n > 0:
-    digit = n % 10
-    product = product*digit
-    n = n // 10
+n = 1221
+c = str(n)
 
-print(product)
+if n == c[::-1]:
+    print("palindrom")
+
+else:
+    print("not pallindrom")
