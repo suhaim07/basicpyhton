@@ -1,8 +1,13 @@
 n = 1221
-c = str(n)
+original = n
+reversed_number = 0
 
-if n == c[::-1]:
-    print("palindrom")
+while n > 0:
+    digit = n % 10
+    reversed_number = reversed_number * 10 + digit
+    n //= 10
 
+if original == reversed_number:
+    print("Palindrome")
 else:
-    print("not pallindrom")
+    print("Not a palindrome")
