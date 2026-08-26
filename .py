@@ -1,7 +1,11 @@
 number = input("Enter a number: ")
-chosen_digit = input("Enter the digit to count (0-9): ")
 
-if len(chosen_digit) != 1 or not chosen_digit.isdigit():
-    print("Please enter exactly one digit.")
+if not number.lstrip("-").isdigit():
+    print("Please enter a valid number.")
 else:
-    print(f"The digit {chosen_digit} appears {number.count(chosen_digit)} time(s).")
+    digits = sorted(set(number) - {"-"}, reverse=True)
+
+    if len(digits) < 2:
+        print("The number does not have a second-largest digit.")
+    else:
+        print(f"The second-largest digit is {digits[1]}.")
