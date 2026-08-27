@@ -1,8 +1,8 @@
-a = int(input("Enter the number: "))
+year = int(input("enter the year: "))
 
-if a == 0:
-    print("it isi 0")
-elif a > 0:
-    print("positve number")
+leap_year = 2024
 
-else: print("negetive number")
+if (leap_year - year) % 4 == 0 :
+    print("it is leap year")
+else:
+    print("not leap year")
