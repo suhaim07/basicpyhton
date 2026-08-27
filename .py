@@ -1,3 +1,8 @@
-row = 5
-for i in range(row+1,0, -1):
-    print(" "* (row + 1)+ "* " * i)
+a = int(input("Enter the number: "))
+
+if a == 0:
+    print("it isi 0")
+elif a > 0:
+    print("positve number")
+
+else: print("negetive number")
