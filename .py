@@ -1,8 +1,4 @@
-year = int(input("enter the year: "))
-
-leap_year = 2024
-
-if (leap_year - year) % 4 == 0 :
-    print("it is leap year")
-else:
-    print("not leap year")
+for i in range(1, 6):
+    for j in range(i):
+        print(i, end="")
+    print()
