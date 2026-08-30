@@ -1,12 +1,5 @@
-n = int(input("Enter a number: "))
+celsius = float(input("Enter temperature in Celsius: "))
 
-factorial = 1
+fahrenheit = (celsius * 9 / 5) + 32
 
-if n < 0:
-    print("Factorial is not defined for negative numbers.")
-elif n == 0:
-    print("Factorial of 0 is 1")
-else:
-    for i in range(1, n + 1):
-        factorial *= i
-    print(f"Factorial of {n} is {factorial}")
+print(f"{celsius}°C is equal to {fahrenheit}°F")
