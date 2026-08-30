@@ -1,22 +1,12 @@
-def is_prime(n):
-    if n <= 1:
-        return False
-    if n <= 3:
-        return True
-    if n % 2 == 0 or n % 3 == 0:
-        return False
+n = int(input("Enter a number: "))
 
-    i = 5
-    while i * i <= n:
-        if n % i == 0 or n % (i + 2) == 0:
-            return False
-        i += 6
-    return True
+factorial = 1
 
-start = int(input("Enter the starting number of the interval: "))
-end = int(input("Enter the ending number of the interval: "))
-
-print(f"Prime numbers between {start} and {end} are:")
-for num in range(start, end + 1):
-    if is_prime(num):
-        print(num)
+if n < 0:
+    print("Factorial is not defined for negative numbers.")
+elif n == 0:
+    print("Factorial of 0 is 1")
+else:
+    for i in range(1, n + 1):
+        factorial *= i
+    print(f"Factorial of {n} is {factorial}")
