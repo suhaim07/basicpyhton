@@ -1,5 +1,10 @@
-celsius = float(input("Enter temperature in Celsius: "))
+lower = int(input("enter the starting limit: "))
+upper = int(input("enter the maximum limit: "))
+for num in range(lower, upper+1):
+    if num > 1:
+        for i in range(2,num):
+            if num % i == 0:
+                break
 
-fahrenheit = (celsius * 9 / 5) + 32
-
-print(f"{celsius}°C is equal to {fahrenheit}°F")
+        else:
+            print(num)
