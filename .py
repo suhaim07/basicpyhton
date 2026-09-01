@@ -1,10 +1,6 @@
-lower = int(input("enter the starting limit: "))
-upper = int(input("enter the maximum limit: "))
-for num in range(lower, upper+1):
-    if num > 1:
-        for i in range(2,num):
-            if num % i == 0:
-                break
+import numpy as np
 
-        else:
-            print(num)
+a = np.array([5,6,7,8,9])
+
+for i in a:
+    print(i)
