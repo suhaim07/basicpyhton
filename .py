@@ -1,6 +1,9 @@
-"""area of triangle"""
-base = int(input("enter the length of base"))
-height = int(input("enter the length of height"))
+a = int(input("enter the variable: "))
+b = int(input("enter the variable: "))
 
-area = 1/2 * base * height
-print("area of triangle = ", area)
+print(f"before swapping a = {a} nd b = {b}")
+
+temp = a
+a = b
+b = temp
+print(f"after swapping a = {a} nd b = {b}")
