@@ -1,6 +1,4 @@
-a = int(input("enter the variable: "))
-b = int(input("enter the variable: "))
+kilometers = float(input("Enter distance in kilometers: "))
+miles = kilometers * 0.621371
 
-print(f"before swapping a = {a} nd b = {b}")
-a , b = b, a
-print(f"after swapping a = {a} nd b = {b}")
+print(f"{kilometers} kilometers is equal to {miles:.2f} miles.")
