@@ -1,20 +1,13 @@
-import cmath
+term_count = int(input("How many Fibonacci terms do you want? "))
 
-a = float(input("Enter a: "))
-b = float(input("Enter b: "))
-c = float(input("Enter c: "))
-
-if a == 0:
-	if b == 0:
-		print("This is not a valid equation." if c != 0 else "Every value of x is a solution.")
-	else:
-		print(f"The solution is x = {-c / b:.2f}")
+if term_count <= 0:
+	print("Please enter a positive number of terms.")
 else:
-	discriminant = b**2 - 4 * a * c
-	root_1 = (-b + cmath.sqrt(discriminant)) / (2 * a)
-	root_2 = (-b - cmath.sqrt(discriminant)) / (2 * a)
+	sequence = []
+	first, second = 0, 1
 
-	if discriminant >= 0:
-		print(f"The roots are x1 = {root_1.real:.2f} and x2 = {root_2.real:.2f}")
-	else:
-		print(f"The complex roots are x1 = {root_1:.2f} and x2 = {root_2:.2f}")
+	for _ in range(term_count):
+		sequence.append(first)
+		first, second = second, first + second
+
+	print("Fibonacci sequence:", sequence)
