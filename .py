@@ -1,13 +1,7 @@
-term_count = int(input("How many Fibonacci terms do you want? "))
+number = int(input("Enter a positive number: "))
 
-if term_count <= 0:
-	print("Please enter a positive number of terms.")
+if number <= 0:
+	print("Please enter a positive number.")
 else:
-	sequence = []
-	first, second = 0, 1
-
-	for _ in range(term_count):
-		sequence.append(first)
-		first, second = second, first + second
-
-	print("Fibonacci sequence:", sequence)
+	natural_numbers = list(range(1, number + 1))
+	print("Natural numbers:", natural_numbers)
